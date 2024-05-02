@@ -1,0 +1,249 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+}
+
+.top{
+  width: 100%;
+  height: 40vh;
+  background-image: linear-gradient(rgba(0,0,0,0.3),transparent), url(./images/header.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 0 5%;
+  position: relative;
+}   
+
+nav{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 5px 0;
+}
+
+.logo{
+  width: 200px;
+  cursor: pointer;
+  position: relative;
+  right: 30%;
+}
+
+nav ul{
+  flex: 1;
+  text-align: right;
+}
+
+nav ul li{
+  display: inline;
+  list-style: none;
+  margin: 10px 30px;
+}
+
+nav ul li a{
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  font-weight: 580;
+}
+
+nav ul li a::after{
+  content: '';
+  width: 0%;
+  height: 3px;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translatex(-50%);
+  background: #fff;
+  transition: width 0.3s;
+}
+
+nav ul li a:hover::after{
+  width: 50%;
+}
+
+.text-box{
+  color: #fff;
+  position: absolute;
+  bottom: 8%;
+}
+
+.text-box p {
+  font-size: 40px;
+  font-weight: 550;
+}
+
+.text-box h1{
+  font-size: 150px;
+  line-height: 160px;
+  margin-left: -10px;
+
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+  background: linear-gradient(-45deg,  #d467df,#d467df,#dcc0f9, #dcc0f9, #6ee8ee , #0ed1df, #0ed1df);
+  -webkit-background-clip: text;
+  background-position: 0 0;
+  animation: back 10s linear infinite reverse;
+}
+
+.text-box h3{
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.text-box .row{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.text-box a{
+  color: #fff; 
+  text-decoration: none;
+  padding: 10px 20px;
+  margin-right: 20px;
+  border: 2px solid #fff;
+}
+
+body{
+  background: linear-gradient(-45deg,  #d467df, #6b3991,#6ee8ee , #0ed1df);
+  background-size: 400% 400%;
+  animation: gradient 6s ease infinite;
+  height: 50vh;
+  }
+
+  /* First container */
+  .container{
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+  }
+
+  /* Second container  */
+  .wrapper{
+    padding: 40px;
+    background-color: #fff;
+    border: 5px solid #fff;
+    border-radius: 20px;
+    border: 3px solid #000;
+  }
+
+  .wrapper h1{
+    text-align: center;
+    padding-bottom: 30px;
+    color: #000;
+  }
+
+  .dice{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    border-radius: 20%;
+    background: linear-gradient(-45deg,  #d467df, #6b3991,#6ee8ee , #0ed1df);
+    background-size: 400% 400%;
+    animation: gradient 6s ease infinite;
+    width: 280px;
+    height: 280px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+      "dot-1 dot-2 dot-3"
+      "dot-4 dot-5 dot-6"
+      "dot-7 dot-8 dot-9";
+    border: 16px solid #000;
+  }
+  
+  #dot-1{
+    grid-area: dot-1;
+  }
+  #dot-2{
+    grid-area: dot-2;
+  }
+  #dot-3{
+    grid-area: dot-3;
+  }
+  #dot-4{
+    grid-area: dot-4;
+  }
+  #dot-5{
+    grid-area: dot-5;
+  }
+  #dot-6{
+    grid-area: dot-6;
+  }
+  #dot-7{
+    grid-area: dot-7;
+  }
+  #dot-8{
+    grid-area: dot-8;
+  }
+  #dot-9{
+    grid-area: dot-9;
+  }
+  
+  .dot{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+  }
+  
+  .roll_btn{
+    background: linear-gradient(-45deg,  #d467df, #6b3991,#6ee8ee , #0ed1df);
+    background-size: 400% 400%;
+    animation: gradient 6s ease infinite;
+    margin-left: 90px;
+    margin-top: 20px;
+    background-color: #fff;
+    color: #fff;
+    font-size: 1.5em;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    border: 3px solid #000;
+  }
+  
+  .hide {
+    display: none;
+  }
+
+/* Footer*/
+footer{
+  background-color: #6b3991;
+  text-align: center;
+  border-top: 1px solid #d9dce2;
+  position: relative;
+  bottom: 10%;
+  top: 100%;
+}
+
+footer p{
+  margin-top: 50px;
+  line-height: 1.3em;
+  padding-bottom: 15px;
+  color: #fff;
+}
+
+  /* Animation for main background*/
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Animation for header font*/
+  @keyframes back{
+    100%{
+      background-position: 2000px 0;
+    }
+  }
