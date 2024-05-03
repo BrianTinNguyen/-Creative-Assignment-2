@@ -211,12 +211,6 @@ footer p{
   color: #fff;
 }
 
-/* On small screens, we are no longer using row direction but column */
-@media all and (max-width: 500px) {
-  .card-list {
-    flex-direction: column;
-  }
-}
 
 @keyframes gradient {
 	0% {
@@ -236,75 +230,37 @@ footer p{
   }
 }
 
+
+
+
 /* Media Queries*/
 
 @media (max-width: 600px) {
-  .aboutme_wrapper{
-      width: 65%;
+  
+  footer{
+    position: relative;
+    top: 1300px;
   }
 
-  .butters_wrapper{
-      width: 65%;
-  }
-
-  .read_wrapper{
-      width: 65%;
-  }
 }
 
 @media (min-width: 601px) {
-  .aboutme_wrapper{
-      width: 65%;
-  }
 
-  .butters_wrapper{
-      width: 65%;
-  }
 
-  .read_wrapper{
-      width: 65%;
-  }
+
 }
 
-
 @media (min-width: 768px) {
-  .aboutme_wrapper{
-      width: 65%;
-  }
 
-  .butters_wrapper{
-      width: 65%;
-  }
 
-  .read_wrapper{
-      width: 65%;
-  }
 }
 
 @media (min-width: 992px) {
-  .aboutme_wrapper{
-      width: 65%;
-  }
 
-  .butters_wrapper{
-      width: 65%;
-  }
 
-  .read_wrapper{
-      width: 65%;
-  }
 }
 
 @media (min-width: 1200px) {
-  .aboutme_wrapper{
-      width: 65%;
-  }
+  
 
-  .butters_wrapper{
-      width: 65%;
-  }
-
-  .read_wrapper{
-      width: 65%;
-  }
 }
